@@ -30,7 +30,7 @@ let meaningOfLife = "How many roads mast a man walk down?"
 */
 /*
 ---Day-1 How to create strings---
-*/
+
 let actor = "Denzel Washington"
 let fileName = "paris.jpg"
 let result = "⭐️ You win! ⭐️"
@@ -49,4 +49,30 @@ print(result.uppercased())
 
 //hasPrefix and lets us know whether a string starts with some letters of our choosing:
 print(movie.hasPrefix("A day"))
+*/
+/*
+---Day-1 How to store whole numbers ---
+
+let score = 10
+let reallyBig = 100_000_000 //ignores under score its for human to ready easly
+
+let lowerScore = score - 2
+let highScore = score + 10
+let doubledScore = score * 2
+let squaredScore = score * score
+let halveScore = score / 2
+
+var counter = 10
+counter += 5
+print(counter)
+
+counter -= 10
+counter *= 2
+counter /= 2
+
+//isMultiple(of:) on an integer to find out whether it’s a multiple of another integer.
+let number = 120
+print(number.isMultiple(of: 3))
+print(120.isMultiple(of: 3))
+ */
 
