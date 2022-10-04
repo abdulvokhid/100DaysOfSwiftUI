@@ -2,6 +2,8 @@ import Cocoa
 
 /*
  ----Day-1 How to create variables and constants-----
+Variable -> var -> Variables are a great way to store temporary data in your programs
+Constants -> let -> We can’t change their values once they are set.
 var hello = "Welcome back again"
 
 //changeble variable
@@ -36,11 +38,13 @@ let fileName = "paris.jpg"
 let result = "⭐️ You win! ⭐️"
 
 let quote = "Then he tapped a sogn saying \"Believe\" and walked away"
-//multilineString
+//multi-line String if you have lots of text you want to store. That’s where multi-line strings come in:
 let movie = """
 A day in the life
 Apple engineer
 """
+var henley = """I am the master of my fate
+ I am the captain of my soul""" // not allowed
 
 print(actor.count)
 let nameResult = result.count
@@ -77,13 +81,16 @@ print(120.isMultiple(of: 3))
  */
 /*
 ---Day-1 How to store decimal numbers ---
-
+Integers hold whole numbers, such as 0, 1, -100, and 65 million
+doubles hold decimal numbers, such as 0.1, -1.001, and 3.141592654.
+ 
 let numbers = 0.1 + 0.2
 print(numbers)
 
 let a = 1
 let b = 2.0
-let c = Double(a) + b // not allows us to use two different data Double(2.0) and Int(1) it must be specified
+let c = Double(a) + b // not allows us to use two different data Double(2.0) and Int(1) it must be specified. why can’t we write var total = myInt + myDouble? The answer is that Swift is playing it safe: we can both see that 1 plus 1.0 will be 2, but your double is a variable so it could be modified to be 1.1 or 3.5 or something else
+
 print(c)
 
 let double1 = 3.1
