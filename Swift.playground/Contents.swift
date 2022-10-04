@@ -75,4 +75,24 @@ let number = 120
 print(number.isMultiple(of: 3))
 print(120.isMultiple(of: 3))
  */
+/*
+---Day-1 How to store decimal numbers ---
 
+let numbers = 0.1 + 0.2
+print(numbers)
+
+let a = 1
+let b = 2.0
+let c = Double(a) + b // not allows us to use two different data Double(2.0) and Int(1) it must be specified
+print(c)
+
+let double1 = 3.1
+let double2 = 3131.3131
+let double3 = 3.0
+let int1 = 3
+
+var name = "Abdulvokhid Azimov"
+//name = 25 // not allowed we already declared its as str
+var rating = 5.0
+rating *= 2
+ */
