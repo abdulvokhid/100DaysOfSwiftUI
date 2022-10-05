@@ -105,7 +105,7 @@ rating *= 2
  */
 /*
  ---Day-2 How to store truth with Booleans---
- */
+
 let fileName = "paris.jpg"
 print(fileName.hasSuffix(".jpg"))
 
@@ -128,3 +128,26 @@ print(isAuthenticated)
 isAuthenticated = !isAuthenticated
 print(isAuthenticated)
 
+---Day-2 How to join strings together---
+ */
+
+let firstPart = "Hello "
+let secondPart = "World"
+let greeting = firstPart + secondPart
+
+let people = "Haters "
+let action = "hate"
+let lyrics = people + "gonna " + action
+
+let luggageCode = "1" + "2" + "3" + "4" + "5"
+let quote = "Then he tapped a sign saying \"Believe\" and walked away"
+
+let name = "Abdulvokhid"
+let age = 26
+let message = "Hello My name is \(name) and I am \(age) years old"
+print(message)
+
+let numbers = 11
+let missionMessage = "Apollo \(numbers) landed on the moon"
+
+print("5 x 5 is \(5*5)")
