@@ -6,7 +6,7 @@ Variable -> var -> Variables are a great way to store temporary data in your pro
 Constants -> let -> We can’t change their values once they are set.
 var hello = "Welcome back again"
 
-//changeble variable
+//changeable variable
 var name = "Ali"
 name = "Azimo"
 name = "Usmon"
@@ -102,7 +102,9 @@ var name = "Abdulvokhid Azimov"
 //name = 25 // not allowed we already declared its as str
 var rating = 5.0
 rating *= 2
+------------------------------------------------------------------------------------------------
  */
+
 /*
  ---Day-2 How to store truth with Booleans---
 
@@ -129,7 +131,7 @@ isAuthenticated = !isAuthenticated
 print(isAuthenticated)
 
 ---Day-2 How to join strings together---
- */
+ 
 
 let firstPart = "Hello "
 let secondPart = "World"
@@ -151,3 +153,17 @@ let numbers = 11
 let missionMessage = "Apollo \(numbers) landed on the moon"
 
 print("5 x 5 is \(5*5)")
+ */
+/*
+Checkpoint - 1
+•Create a constant holding any temperature in Celsuis
+•Converts that temperature to Fahrenheit by multiplying by 9, dividing by 5, then adding 32
+•Print the result, showing both the Celsius and Fahrenheit values
+
+//Challenge Result
+let celsius = 25.0
+let fahrenheit = Decimal(celsius) * 9 / 5 + 32
+print("The temperature in Celsius is \(celsius)℃ and temperature in Fahrenheit is \(fahrenheit)℉")
+--------------------------------------------------------------------------------------------------
+ */
+
