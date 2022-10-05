@@ -103,3 +103,28 @@ var name = "Abdulvokhid Azimov"
 var rating = 5.0
 rating *= 2
  */
+/*
+ ---Day-2 How to store truth with Booleans---
+ */
+let fileName = "paris.jpg"
+print(fileName.hasSuffix(".jpg"))
+
+let number = 120
+print(number.isMultiple(of: 3))
+
+let goodDogs = true
+var gameOver = false
+print(gameOver)
+gameOver.toggle() //That will print false first, then after calling toggle() will print true. Yes, that’s the same as using ! just in slightly less code
+print(gameOver)
+
+
+let isMultiple = 120.isMultiple(of: 3)
+print(isMultiple)
+
+var isAuthenticated = false
+isAuthenticated = !isAuthenticated
+print(isAuthenticated)
+isAuthenticated = !isAuthenticated
+print(isAuthenticated)
+
