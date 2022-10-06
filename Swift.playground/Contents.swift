@@ -166,4 +166,50 @@ let fahrenheit = Decimal(celsius) * 9 / 5 + 32
 print("The temperature in Celsius is \(celsius)℃ and temperature in Fahrenheit is \(fahrenheit)℉")
 --------------------------------------------------------------------------------------------------
  */
+/*
+Day-3 How to store ordered data in arrays
 
+*/
+var  beattles = ["John", "Paul", "George", "Ringo"] //str
+beattles.append("Adrian") //adds new value to the array
+print(beattles)
+
+var numbers = [4, 8, 15, 16, 23, 42] //int
+print(numbers[3])
+var temperature = [25.3, 28.2, 26.4] //double
+
+//an other way of creating an array
+var score = Array<Int>()
+score.append(100)
+score.append(80)
+score.append(85)
+print(score[1])
+
+//an other way off creating an array
+var albums = [String]()
+albums.append("Folklore")
+albums.append("Fearless")
+albums.append("Red")
+print(albums.count)
+
+//ways of removing items fro the array
+var characters = ["Lana","Pam","Ray","Sterling"]
+print(characters.count)
+
+characters.remove(at: 2)
+print(characters.count)
+
+characters.removeAll()
+print(characters.count)
+
+//checks wether array contains with any name that has been mentioned in contains
+let bondMovies = ["Casino Royale", "Spector", "No Time To Die"]
+print(bondMovies.contains("Frozen")) // output will be false as it does not contain Frozen
+
+//sort an array alphabatically
+let cities = ["London","Tokyo","Rome","Budapest"]
+print(cities.sorted())
+
+let presidents = ["Bush", "Obama", "Trump", "Biden"]
+let reversedPresidents = presidents.reversed()
+print(reversedPresidents)
