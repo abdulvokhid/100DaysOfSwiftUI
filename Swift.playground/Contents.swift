@@ -216,7 +216,7 @@ print(reversedPresidents)
  */
 /*
 ---Day-3 How to store and find data in dictionaries
-*/
+
 var employee = ["Abdulvokhid Azimov", "Developer", "Tashkent"]
 print("Name \(employee[0])")
 employee.remove(at: 1)
@@ -247,6 +247,23 @@ heights["Lebron James"] = 206
 
 var archEneies = [String: String]()
 archEneies["Batman"] = "The Joker"
-archEneies["Superman"] = "Lex Luthor"
+archEneies["Superman"] = "Lex Luthor",
 archEneies["Batman"] = "Penguin"
+ */
+/*
+---Day-3 How to use sets for fast data lookup---
+*/
 
+let actors = Set([
+    "Denzel Washington",
+    "Tom Cruise",
+    "Nicolas Cage",
+    "Samuel L Jackson"
+])
+
+var actors2 = Set<String>()
+actors2.insert("Denzel Washington")
+actors2.insert("Tom Cruise")
+actors2.insert("Nicolas Cage")
+actors2.insert("Samuel L Jackson")
+print(actors2)
