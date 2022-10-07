@@ -169,7 +169,7 @@ print("The temperature in Celsius is \(celsius)℃ and temperature in Fahrenheit
 /*
 Day-3 How to store ordered data in arrays
 
-*/
+
 var  beattles = ["John", "Paul", "George", "Ringo"] //str
 beattles.append("Adrian") //adds new value to the array
 print(beattles)
@@ -213,3 +213,40 @@ print(cities.sorted())
 let presidents = ["Bush", "Obama", "Trump", "Biden"]
 let reversedPresidents = presidents.reversed()
 print(reversedPresidents)
+ */
+/*
+---Day-3 How to store and find data in dictionaries
+*/
+var employee = ["Abdulvokhid Azimov", "Developer", "Tashkent"]
+print("Name \(employee[0])")
+employee.remove(at: 1)
+print("Job title: \(employee[1])")
+//print("Location: \(employee[2])") error becuase out of range
+
+var employee2 = ["name": "Abdulvokhid Azimov", "job": "Developer", "location": "Tashkent"]
+print(employee2["name", default: "Unkown"])
+print(employee2["job", default: "Unkown"])
+print(employee2["location", default: "Unkown"])
+
+let hasGraduated = [
+    "Ali": false,
+    "Azim": true,
+    "John": false
+]
+let olympics = [
+    2012: "London",
+    2016: "Rio de Janeiro",
+    2021: "Tokyo"
+]
+print(olympics[2012, default: "Unkown"])
+
+var heights = [String: Int]()
+heights["Yao Ming"] = 229
+heights["Shquille O'Neil"] = 216
+heights["Lebron James"] = 206
+
+var archEneies = [String: String]()
+archEneies["Batman"] = "The Joker"
+archEneies["Superman"] = "Lex Luthor"
+archEneies["Batman"] = "Penguin"
+
