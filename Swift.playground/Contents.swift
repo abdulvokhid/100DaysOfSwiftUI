@@ -280,3 +280,43 @@ day = .tuesday
 day = .friday
 -------------------------------------------------------------------------------------------------
  */
+/*
+---Day-4 How to use type annotations
+
+let surname: String = "Lasso"
+var score: Double = 0
+let playName: String = "Roy"
+let luckyNumber: Int = 13
+let pi: Double = 3.131
+var isAuthenticated: Bool = true
+
+//complex types
+var albums: [String] = ["Red", "Fearless"]
+var user: [String: String] = ["id": "@twostraws"]
+var books: Set<String> = Set ([
+    "The Bluest Eye",
+    "Foundation",
+    "Girl, Woman, Other"
+])
+
+var soda: [String] = ["Coke", "Pepsi", "Irn-Bru"]
+//empty an arrays (3 all the same choose what you like)
+var teams: [String] = [String]()
+var citites: [String] = []
+var clues = [String]()
+
+enum UIStyle {
+    case light, dark, sysytem
+}
+
+var style = UIStyle.light
+style = .dark
+style = .sysytem
+
+
+let userName: String //this type of code requires type annotations
+// lots of complex logic
+userName = "@WhiTe"
+//lots more complex logic
+print(userName)
+ */
