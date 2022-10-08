@@ -320,3 +320,18 @@ userName = "@WhiTe"
 //lots more complex logic
 print(userName)
  */
+/*
+---Checkpoint 2---
+
+• Create an array of strings then write some code that prints the number of items
+• Also number of unique items in the array
+ 
+---Solution---
+• created an array programmingLanguages identifed with Set and declared as String
+• Set helps to print unique items from our an array
+• .count prints how many number of items do we have in our an array
+ 
+var programmingLanguges: Set<String> = ["python","c++","c#", "javaScript", "go", "java", "swift", "kotlin", "swift"]
+print(programmingLanguges.count)
+print(programmingLanguges)
+ */
