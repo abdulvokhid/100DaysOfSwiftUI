@@ -252,7 +252,7 @@ archEneies["Batman"] = "Penguin"
  */
 /*
 ---Day-3 How to use sets for fast data lookup---
-*/
+
 
 let actors = Set([
     "Denzel Washington",
@@ -267,3 +267,16 @@ actors2.insert("Tom Cruise")
 actors2.insert("Nicolas Cage")
 actors2.insert("Samuel L Jackson")
 print(actors2)
+ */
+/*
+---Day-3 How to create and use enums---
+
+//An enum – short for enumeration – is a set of named values we can create and use in our code
+enum Weekday {
+    case monday, tuesday, wednesday, thursday, friday
+}
+var day = Weekday.monday
+day = .tuesday
+day = .friday
+-------------------------------------------------------------------------------------------------
+ */
