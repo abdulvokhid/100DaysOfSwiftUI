@@ -334,4 +334,66 @@ print(userName)
 var programmingLanguges: Set<String> = ["python","c++","c#", "javaScript", "go", "java", "swift", "kotlin", "swift"]
 print(programmingLanguges.count)
 print(programmingLanguges)
+-----------------------------------------------------------------------------------------------------
  */
+/*
+---Day-5 How to check a condition is true or false
+ 
+*/
+let score = 85
+
+if score > 80 {
+    print("Great Job")
+}
+
+let speed = 88
+let percentage = 85
+let age = 18
+
+if speed >= 88 { //greater or equal to 88 output must be TRUE
+    print("Where we're going, we dont need roads")
+}
+
+if percentage < 85 { //it must return FALSE
+    print("Sorry, you failed the test")
+}
+
+if age >= 18 { // it must return TRUE
+    print("You are eligible to vote")
+}
+
+let ourName = "Abdulvokhid Azimov"
+let friendName = "Jakhongir Rasulov"
+
+if ourName < friendName {
+    print("It's \(ourName) vs \(friendName)")
+    print("Total letters of ourName is \(ourName.count) and total letters of friendName is \(friendName.count)")
+}
+if ourName > friendName {
+    print("It's \(friendName) vs \(ourName)")
+    print("Total letters of friendName is \(friendName.count) and total letters of ourName is \(ourName.count)")
+}
+
+var numbers = [1,2,3]
+numbers.append(4)
+
+if numbers.count > 3 {
+    numbers.remove(at: 0)
+}
+print(numbers)
+
+let country = "Canada"
+
+if country == "Australia" {
+    print("G' day")
+}
+let name = "Abdulvokhid Azimov"
+if name != "Anonymous" {
+    print("Welcome \(name)")
+}
+
+var userName = "abdulvokhid123"
+if userName.isEmpty {
+    userName = "Anonymous"
+}
+print("Welcome, \(userName)")
