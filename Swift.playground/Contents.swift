@@ -339,7 +339,6 @@ print(programmingLanguges)
 /*
 ---Day-5 How to check a condition is true or false
  
-*/
 let score = 85
 
 if score > 80 {
@@ -397,3 +396,42 @@ if userName.isEmpty {
     userName = "Anonymous"
 }
 print("Welcome, \(userName)")
+ */
+/*
+ ---Day-5 How to check multiple conditions
+ 
+let age = 16
+
+if age >= 18 {
+    print("You can vote in the next election")
+} else {
+    print("Sorry, you are too young to vote")
+}
+//logical operator
+let temp = 25
+if temp > 20 && temp < 30 { //(&& AND)
+    print("It's a nice day")
+}
+
+let userAge = 14
+let hasParentalConsent = true
+
+if age >= 18 || hasParentalConsent { //(|| OR) right was true thats why we have output
+    print("You can buy the game!")
+}
+
+enum transportOption {
+    case airplane, helicopter, bicycle, car, escooter
+}
+let transport = transportOption.airplane
+if transport == .airplane || transport == .helicopter{
+    print("We will fly")
+} else if transport == .escooter {
+    print("I hope there is a bike path")
+} else if transport == .car {
+    print("Lets visit museum in Mountains")
+} else {
+    print("Lets stay at home")
+}
+ */
+
