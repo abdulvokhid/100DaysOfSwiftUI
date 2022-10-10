@@ -436,7 +436,7 @@ if transport == .airplane || transport == .helicopter{
  */
 /*
 ---Day-5 How to use switch statements to check multiple conditions---
-*/
+
 
 enum Weather {
     case sun, rain, wind, snow, unknown
@@ -488,3 +488,25 @@ case 2:
 default:
     print("A partridge in a pear tree")
 }
+ */
+/*
+---Day-5 How to use the ternary conditional operator for quick tests---
+*/
+
+let age = 18
+let canVote = age >= 18 ? "Yes" : "No"
+print(canVote)
+
+let hour = 23
+print(hour < 12 ? "Its before none" : "Its after noon")
+
+let name = ["Abdulvokhid","Ali","Azim"]
+let crewCount = name.isEmpty ? "No one" : "\(name.count) people"
+print(crewCount)
+
+enum Theme {
+    case light, dark
+}
+let theme = Theme.dark
+let background = theme == .dark ? "black" : "white"
+print(background)
