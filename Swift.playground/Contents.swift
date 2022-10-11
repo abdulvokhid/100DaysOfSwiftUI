@@ -548,7 +548,6 @@ print(lyrics)
 /*
 ---Day-6 How to use a while loop to repeat work
 
-
 var countDown = 10
 
 while countDown > 0 {
@@ -567,3 +566,30 @@ while roll != 20 {
 }
 print("Critical hit!")
 */
+/*
+---Day-6 How to skip loop items with break and continue
+
+
+var fileNames = ["me.jpg", "work.txt", "sophie.jpg"]
+for filename in fileNames {
+    if filename.hasSuffix(".jpg") == false {
+        continue
+    }
+    print("Found picture: \(filename)")
+}
+
+let number1 = 4
+let number2 = 14
+var multiples = [Int]()
+
+for i in 1...100_000 {
+    if i.isMultiple(of: number1) && i.isMultiple(of: number2) {
+        multiples.append(i)
+        
+        if multiples.count == 10 {
+            break
+        }
+    }
+}
+print(multiples)
+ */
