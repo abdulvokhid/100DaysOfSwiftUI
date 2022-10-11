@@ -491,7 +491,7 @@ default:
  */
 /*
 ---Day-5 How to use the ternary conditional operator for quick tests---
-*/
+
 
 let age = 18
 let canVote = age >= 18 ? "Yes" : "No"
@@ -510,3 +510,37 @@ enum Theme {
 let theme = Theme.dark
 let background = theme == .dark ? "black" : "white"
 print(background)
+--------------------------------------------------------------------------------------------------
+ */
+/*
+---Day-6 How to use a for loop to repeat work
+
+
+let platforms = ["iOS","macOS","tvOS","watchOS"]
+for os in platforms {
+    print("Swift works great on \(os)")
+}
+
+
+for i in 1...12 {
+    print("This \(i) times table")
+    for j in 1...12 {
+        print(" \(j) x \(i) is \(j * i)")
+    }
+    print()
+}
+
+for i in 1...5 {
+    print("Counting from 1 through 5: \(i)")
+}
+for i in 1..<5 {
+    print("Counting from 1 up to 5: \(i)")
+}
+
+var lyrics = "Haters gonna"
+
+for _ in 1...5 {
+    lyrics += "hate "
+}
+print(lyrics)
+*/
