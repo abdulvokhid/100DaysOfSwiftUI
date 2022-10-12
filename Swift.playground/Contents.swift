@@ -597,13 +597,12 @@ print(multiples)
 ---Checkpoint-3 ---
 */
 
-var num = 100
-for i in Int(num) {
-    if i * 3 {
+for i in 1...100 {
+    if i % 3 == 0 {
         print("Fizz")
-    } else if i * 5 {
+    } else if i % 5 == 0 {
         print("Buzz")
-    } else if i * 3 && i * 5 {
+    } else if i % 3 == 0 && i % 5 == 0 {
         print("FizzBuzz")
     } else {
         print(i)
