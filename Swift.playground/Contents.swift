@@ -593,3 +593,19 @@ for i in 1...100_000 {
 }
 print(multiples)
  */
+/*
+---Checkpoint-3 ---
+*/
+
+var num = 100
+for i in Int(num) {
+    if i * 3 {
+        print("Fizz")
+    } else if i * 5 {
+        print("Buzz")
+    } else if i * 3 && i * 5 {
+        print("FizzBuzz")
+    } else {
+        print(i)
+    }
+}
