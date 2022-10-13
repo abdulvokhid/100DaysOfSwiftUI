@@ -668,5 +668,13 @@ func stringDo(string1: String, string2: String) -> Bool {
     } else {
         return false
     }
+    //other way of solving an issue but result taken from course
+    // return string1.sorted() == string2.sorted()
 }
 stringDo(string1: "ABCD", string2: "DCBA")
+
+func pythagoras(a: Double, b: Double) -> Double {
+    sqrt(a * a + b * b)
+}
+let c = pythagoras(a: 3, b: 4)
+print(c)
