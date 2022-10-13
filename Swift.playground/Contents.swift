@@ -651,3 +651,18 @@ func printTimesTable(number: Int, end: Int) {
 
 printTimesTable(number: 5, end: 20)
 */
+/*
+---Day-7 How to return values from functions
+*/
+
+func rollDice() -> Int {
+    return Int.random(in: 1...6)
+}
+let result = rollDice()
+print(result)
+
+
+func stringDo(string1: String, string2: String) -> Bool {
+    return true
+}
+stringDo(string1: "ABCD", string2: "ABCD")
