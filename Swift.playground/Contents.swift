@@ -663,6 +663,10 @@ print(result)
 
 
 func stringDo(string1: String, string2: String) -> Bool {
-    return true
+    if string1.sorted() == string2.sorted() {
+        return true
+    } else {
+        return false
+    }
 }
-stringDo(string1: "ABCD", string2: "ABCD")
+stringDo(string1: "ABCD", string2: "DCBA")
