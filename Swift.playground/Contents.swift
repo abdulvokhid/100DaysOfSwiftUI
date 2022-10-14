@@ -653,7 +653,7 @@ printTimesTable(number: 5, end: 20)
 */
 /*
 ---Day-7 How to return values from functions
-*/
+
 
 func rollDice() -> Int {
     return Int.random(in: 1...6)
@@ -678,3 +678,22 @@ func pythagoras(a: Double, b: Double) -> Double {
 }
 let c = pythagoras(a: 3, b: 4)
 print(c)
+ */
+/*
+---Day-7 How to return multiple values from functions---
+
+//this is really bad solution for this case
+func getUser() -> [String: String] {
+    ["firstName":"Abdulvokhid", "lastName":"Azimov"]
+}
+let user = getUser()
+print("Name: \(user["firstName", default: "?"]) \(user["lastName", default: "?"])")
+
+//swift has better solution for tuples and dictionaries
+func gg() -> (name: String, name2: String) {
+    ("Abdulvokhid","Azimov")
+}
+let azim = gg()
+print("Name: \(azim.name) \(azim.name2)")
+*/
+
