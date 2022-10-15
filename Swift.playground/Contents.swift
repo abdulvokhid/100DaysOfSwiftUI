@@ -698,7 +698,7 @@ print("Name: \(azim.name) \(azim.name2)")
 */
 /*
 ---Day-7 How to customize parameter labels---
-*/
+
 
 func rollDice(sides: Int, count: Int) -> [Int] {
     var rolls = [Int]()
@@ -732,3 +732,4 @@ func printTimesTable(for number: Int) {
     }
 }
 printTimesTable(for: 2)
+*/
