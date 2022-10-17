@@ -732,4 +732,21 @@ func printTimesTable(for number: Int) {
     }
 }
 printTimesTable(for: 2)
+ ------------------------------------------------------------------------------------------------
 */
+/*
+---Day-8 How to provide default values for parameters
+
+func printTimesTables(for number: Int, end: Int = 12) {
+    for i in 1...end {
+        print("\(i) x \(number) is \(i * number)")
+    }
+}
+printTimesTables(for: 5, end: 20)
+printTimesTables(for: 8)
+
+var characters = ["Ali", "Azim", "Vokhid", "Day"]
+print(characters.count)
+characters.removeAll(keepingCapacity: true)
+print(characters.count)
+ */
