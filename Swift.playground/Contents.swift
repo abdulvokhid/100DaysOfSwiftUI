@@ -783,3 +783,13 @@ do {
     print("There was an error \(error.localizedDescription)")
 }
  */
+/*
+---Day-8 Checkpoint 4---
+ */
+func someNumber(num: Int) throws -> Int {
+    for i in 1...10_000 {
+        if i < 1 || i > 10_000 {
+            print("Out of bounds")
+        }
+    }
+}
