@@ -1,5 +1,6 @@
 import Cocoa
 
+
 /*
  ----Day-1 How to create variables and constants-----
 Variable -> var -> Variables are a great way to store temporary data in your programs
@@ -785,7 +786,7 @@ do {
  */
 /*
 ---Day-8 Checkpoint 4---
- */
+ 
 //The challenge is this: write a function that accepts an integer from 1 through 10,000, and returns the integer square root of that number. That sounds easy, but there are some catches:
 
 //You can’t use Swift’s built-in sqrt() function or similar – you need to find the square root yourself.
@@ -796,11 +797,24 @@ do {
 enum errorHandling: Error {
     case error
 }
-func someNumber(num: Int) throws -> Int {
-    for i in 1...10_000 {
-        if i < 1 || i > 10_000 {
-            throw errorHandling.error
+func someNumber(num: Int) throws -> String {
+    guard num > 1 && num < 10_000 else {
+        throw errorHandling.error
+    }
+    for i in 1...100 {
+        if num == i * i {
+            return "\(i)"
         }
     }
-    return
+    return "No root"
 }
+
+do {
+    let result = try someNumber(num: 3)
+    print("The root is \(result)")
+} catch errorHandling.error {
+    print("Out of bounds")
+} catch {
+    print("Not clever")
+}
+ */
