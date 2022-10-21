@@ -817,4 +817,44 @@ do {
 } catch {
     print("Not clever")
 }
+ -----------------------------------------------------------------------------------------------------
+ */
+/*
+---Day-9 How to create and use closures---
+
+
+func greetUser(){
+    print("Whats up")
+}
+greetUser()
+var greetCopy = greetUser
+greetCopy()
+
+let sayHelo = {(name: String) -> String in "Hi \(name)"}
+
+func getUserData(for id: Int) -> String {
+    if id == 1989 {
+        return "Taylor Swift"
+    } else {
+        return "Anonymous"
+    }
+}
+let data: (Int) -> String = getUserData
+let user = data(1989)
+print(user)
+
+let team = ["Abi", "Jo", "Michal", "Pavel", "Radim", "Ali", "Luz"]
+let sortedTeam = team.sorted()
+print(sortedTeam)
+
+func captainFirstStored(name1: String, name2: String) -> Bool {
+    if name1 == "Suzanne" {
+        return true
+    } else if name2 == "Suzanne" {
+        return false
+    }
+    return name1 < name2
+}
+let captainFirstTeam = team.sorted(by: captainFirstStored)
+print(captainFirstTeam)
  */
