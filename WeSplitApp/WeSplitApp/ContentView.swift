@@ -14,7 +14,7 @@ struct ContentView: View {
     @State private var tipPercentage = 20
     @FocusState private var amountIsFocused: Bool
     
-    let tipPercentages = [10, 15, 20, 25, 0]
+//    let tipPercentages = [10, 15, 20, 25, 0] challenge-3
     var totalPerPerson: Double {
         //calculation the total per person here
         let peopleCount = Double(numberOfPeople + 2)
@@ -48,13 +48,14 @@ struct ContentView: View {
                         }
                     }
                 }
+                
                 Section {
                     Picker("Tip percentage", selection: $tipPercentage) {
-                        ForEach(tipPercentages, id: \.self) {
+                        ForEach(0..<101) { //challenge-3 the tip percentage picker to show a new screen rather than suing a segmented control, and give it wider range of option - everything from 0% to 100%
                             Text($0, format: .percent)
                         }
                     }
-                    .pickerStyle(.segmented)
+                    .pickerStyle(.automatic)
                 } header: {
                     Text("How much tip do you want to leave?")
                 }
