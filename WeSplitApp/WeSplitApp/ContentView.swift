@@ -50,9 +50,14 @@ struct ContentView: View {
                 } header: {
                     Text("How much tip do you want to leave?")
                 }
+                Section {
+                    Text()
+                }
                 
                 Section {
                     Text(totalPerPerson, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                } header: {
+                    Text("Amount per person") // challenge-1 add a header to third section, saying "Amount per person"
                 }
             }
             .navigationTitle("WeSplit")
