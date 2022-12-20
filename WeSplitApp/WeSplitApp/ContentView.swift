@@ -26,6 +26,14 @@ struct ContentView: View {
         
         return amountPerPerson
     }
+    //challenge-2
+    var grandTotal: Double {
+        let tipSelection = Double(tipPercentage)
+        let tipValue = checkAmount / 100 * tipSelection
+        let grandTotal = checkAmount + tipValue
+        
+        return grandTotal
+    }
     
     var body: some View {
         NavigationView{
@@ -50,8 +58,11 @@ struct ContentView: View {
                 } header: {
                     Text("How much tip do you want to leave?")
                 }
+                // challenge-2 add another section showing the total amount for the check - i.e., the orginal amount plus tip value, without dividing by the number of people
                 Section {
-                    Text()
+                    Text(grandTotal, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                } header: {
+                    Text("Total Amount for Check")
                 }
                 
                 Section {
