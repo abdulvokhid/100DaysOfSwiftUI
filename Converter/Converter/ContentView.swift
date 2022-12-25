@@ -10,13 +10,15 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var userEnteredSecund = 0
-    @State private var secund = 0
-    @State private var hours = 60
+    @State private var secund = 3600
+    @State private var hours = 1
+    @FocusState private var amountIsFocused: Bool
     
     var convertToHour: Int {
-        let hour = Int(userEnteredSecund + secund)
+        let secund = userEnteredSecund / secund
         
-        return hour
+        
+        return secund
     }
     
     
@@ -25,6 +27,8 @@ struct ContentView: View {
             Form {
                 Section{
                     TextField("Second", value: $userEnteredSecund, format: .number)
+                        .keyboardType(.decimalPad)
+                        .focused($amountIsFocused)
                 } header: {
                     Text("Second")
                 }
