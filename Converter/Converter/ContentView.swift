@@ -9,16 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var userEnteredSecund = 0
-    @State private var secund = 3600
-    @State private var hours = 1
+    @State private var userEnteredSecund = 0.0
+    @State private var secund = 0.0
+    
     @FocusState private var amountIsFocused: Bool
     
-    var convertToHour: Int {
-        let secund = userEnteredSecund / secund
+    var convertToHour: Double {
+        var result = (userEnteredSecund / (secund + 3600))
+        print(result)
+                      
+        return result
         
-        
-        return secund
     }
     
     
@@ -32,6 +33,7 @@ struct ContentView: View {
                 } header: {
                     Text("Second")
                 }
+                
                 Section {
                     Text(convertToHour, format: .number)
                 } header: {
