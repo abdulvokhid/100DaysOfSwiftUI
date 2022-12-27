@@ -12,6 +12,7 @@ struct ContentView: View {
     @State private var amount = ""
     @State private var choose = 0 // allows to use if statement
     @State private var secund = 0
+    @FocusState private var amountIsFocused: Bool
     
     let timeOption = ["Minute","Hour","Date"]
     
@@ -19,8 +20,6 @@ struct ContentView: View {
     let minute = 60
     let hour = 3600
     let date = 86400
-    
-    @FocusState private var amountIsFocused: Bool
     
     var convert: Double {
         
@@ -45,6 +44,7 @@ struct ContentView: View {
                     TextField("Second", text: $amount)
                         .keyboardType(.decimalPad)
                         .focused($amountIsFocused)
+                    
                     Picker("Choose time from the list", selection: $choose) {
                         ForEach(0 ..< timeOption.count) {
                             Text(self.timeOption[$0])
@@ -63,6 +63,13 @@ struct ContentView: View {
                 
             }
             .navigationTitle("TimeConverter")
+            .toolbar{
+                ToolbarItemGroup(placement: .keyboard) {
+                    Button("Done") {
+                        amountIsFocused = false
+                    }
+                }
+            }
         }
     }
 }
