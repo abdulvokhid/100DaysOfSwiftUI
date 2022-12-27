@@ -10,11 +10,12 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var amount = ""
-    @State private var choose = 0
+    @State private var choose = 0 // allows to use if statement
     @State private var secund = 0
     
     let timeOption = ["Minute","Hour","Date"]
     
+    // based on second
     let minute = 60
     let hour = 3600
     let date = 86400
@@ -27,15 +28,13 @@ struct ContentView: View {
         var result: Double = 0
         
         if choose == 0 {
-            result = amountDouble / Double(secund + minute)
+            result = amountDouble / Double(secund + minute) //minute cal
         } else if choose == 1 {
-            result = amountDouble / Double(secund + hour)
+            result = amountDouble / Double(secund + hour) // hour cal
         } else if choose == 2 {
-            result = amountDouble / Double(secund + date)
+            result = amountDouble / Double(secund + date) // date cal
         }
         
-        //let minute = (userEnteredSecund / (secund + 60)) // minute cal
-        //let hour = (userEnteredSecund / (secund + 3600)) // secund cal
      return result
     }
     
