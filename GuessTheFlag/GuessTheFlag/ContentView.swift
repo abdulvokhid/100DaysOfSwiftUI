@@ -9,7 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        RadialGradient(gradient: Gradient(colors: [.blue, .black]), center: .center, startRadius: 20, endRadius: 200)
+        Button {
+            print("Button was tapped")
+        } label: {
+            Label("Edit", systemImage: "pencil")
+        }
+        
+    }
+    
+    func executeDelete() {
+        print("Now deleting")
     }
 }
 
