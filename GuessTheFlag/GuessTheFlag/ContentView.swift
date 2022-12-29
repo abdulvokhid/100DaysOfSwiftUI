@@ -8,17 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        Button {
-            print("Button was tapped")
-        } label: {
-            Label("Edit", systemImage: "pencil")
-        }
-        
-    }
     
-    func executeDelete() {
-        print("Now deleting")
+    @State private var showingAlert = false
+    
+    var body: some View {
+        Button("Show Alert") {
+            showingAlert = true
+        }
+        .alert("Important message", isPresented: $showingAlert) {
+            Button("Delete", role: .destructive) {}
+            Button("Cancel", role: .cancel) {}
+        } message: {
+            Text("Please read this")
+        }
     }
 }
 
