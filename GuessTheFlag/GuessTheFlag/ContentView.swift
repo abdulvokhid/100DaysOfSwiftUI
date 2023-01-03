@@ -26,7 +26,6 @@ struct ContentView: View {
                 Text("Guess the Flag")
                     .font(.largeTitle.bold())
                     .foregroundColor(.white)
-                
                 VStack(spacing: 25) {
                     VStack {
                         Text("Tap the flag of")
@@ -54,7 +53,7 @@ struct ContentView: View {
                 Spacer()
                 Spacer()
                 
-                Text("Score: ???")
+                Text("Score: \(scoreTitle)")
                     .foregroundColor(.white)
                     .font(.title.bold())
                 
@@ -65,7 +64,7 @@ struct ContentView: View {
         .alert(scoreTitle, isPresented: $showingScore) {
             Button("Continue", action: askQuestion)
         } message: {
-            Text("Your score is ??")
+            Text("Your score is \(showingScore)" as String)
         }
     }
     
