@@ -72,9 +72,9 @@ struct ContentView: View {
     func flagTapped(_ number: Int) {
         if number == correctAnswer {
             scoreTitle = "Correct"
-            userScore += 1
+            userScore += 1 // when user finds correct flag it increase score
         } else {
-            scoreTitle = "Wrong! That is flag of ???)"
+            scoreTitle = "Wrong! That is flag of \(countries[number])" //challenge-2 displays when user says wrong answer
             userScore -= 1
         }
         showingScore = true
