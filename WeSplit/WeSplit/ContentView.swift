@@ -9,12 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var tapCount = 0
+    @State var name = ""
     
     var body: some View {
         NavigationStack{
-            Button("Tap Count: \(tapCount)"){
-                self.tapCount += 1
+            Form{
+                TextField("Enter something", text: $name)
+                Text("Your name is \(name)")
             }
             .navigationTitle("WeSplit")
             .navigationBarTitleDisplayMode(.inline)
