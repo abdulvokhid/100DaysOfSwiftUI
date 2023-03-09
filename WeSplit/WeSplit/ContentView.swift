@@ -13,6 +13,9 @@ struct ContentView: View {
     @State private var numberOfPeople = 2
     @State private var tipPercentage = 20
     
+    //Hiding the key
+    @FocusState private var amountIsFocused: Bool
+    
     let tipPercentages = [10, 15, 20, 25, 0]
     var totalPerPerson: Double {
         let peopleCount = Double(numberOfPeople + 2)
@@ -31,6 +34,7 @@ struct ContentView: View {
                 Section {
                     TextField("Amount", value: $checkAmount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
                         .keyboardType(.decimalPad)
+                        .focused($amountIsFocused)//if u remove it wont work
                     Picker("Number of people", selection: $numberOfPeople){
                         ForEach(2 ..< 100){
                             Text("\($0) people")
@@ -53,6 +57,14 @@ struct ContentView: View {
             }
             .navigationTitle("WeSplit")
             .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItemGroup(placement: .keyboard) {
+                    Spacer()
+                    Button("Done"){
+                        amountIsFocused = false
+                    }
+                }
+            }
         }
     }
 }
