@@ -34,6 +34,11 @@ struct ContentView: View {
         
         return totalValue
     }
+    //rather than having to type .currency(code: Locale.current.currencyCode ?? "USD") in two places, can you make a new property to store the currency formatter?
+    var dollarFormatter: FloatingPointFormatStyle<Double>.Currency {
+        let currencyCode = Locale.current.currency?.identifier ?? "USD"
+        return FloatingPointFormatStyle<Double>.Currency(code: currencyCode)
+    }
     
     var body: some View {
         NavigationStack{
@@ -59,12 +64,12 @@ struct ContentView: View {
                     Text("How much tip do you want to leave")
                 }
                 Section {
-                    Text(totalAmount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                    Text(totalAmount, format: dollarFormatter)
                 } header: {
                     Text("Total Cost with Tip")
                 }
                 Section{
-                    Text(totalPerPerson, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                    Text(totalPerPerson, format: dollarFormatter)
                 } header: {
                     Text("Amount per person")
                 }
