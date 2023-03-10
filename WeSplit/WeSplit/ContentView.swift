@@ -16,7 +16,7 @@ struct ContentView: View {
     //Hiding the key
     @FocusState private var amountIsFocused: Bool
     
-    let tipPercentages = [10, 15, 20, 25, 0]
+    //let tipPercentages = [10, 15, 20, 25, 0] no need as its hard coded instead of it used ForEach(0..<101)
     var totalPerPerson: Double {
         let peopleCount = Double(numberOfPeople + 2)
         let tipSelection = Double(tipPercentage)
@@ -26,6 +26,13 @@ struct ContentView: View {
         let amountPerPerson = grandTotal / peopleCount
         
         return amountPerPerson
+    }
+    var totalAmount: Double {
+        let tipSelection = Double(tipPercentage)
+        let tipValue = checkAmount / 100 * tipSelection
+        let totalValue = checkAmount + tipValue
+        
+        return totalValue
     }
     
     var body: some View {
@@ -43,16 +50,23 @@ struct ContentView: View {
                 }
                 Section {
                     Picker("Tip percentage", selection: $tipPercentage) {
-                        ForEach(tipPercentages, id: \.self) {
+                        ForEach(0..<101, id: \.self) {
                             Text($0, format: .percent)
                         }
                     }
-                    .pickerStyle(.segmented)
+                    .pickerStyle(.automatic)
                 } header: {
                     Text("How much tip do you want to leave")
                 }
+                Section {
+                    Text(totalAmount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                } header: {
+                    Text("Total Cost with Tip")
+                }
                 Section{
                     Text(totalPerPerson, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                } header: {
+                    Text("Amount per person")
                 }
             }
             .navigationTitle("WeSplit")
