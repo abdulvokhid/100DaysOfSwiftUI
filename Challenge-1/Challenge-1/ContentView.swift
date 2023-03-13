@@ -11,10 +11,8 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var hour = 0.0
-    @State private var seconds = 0.0
-    @State private var minutes = 0.0
-    @State private var days = 0.0
-    @State private var timer = "seconds"
+    @State private var input = "seconds"
+    @State private var output = ""
     //Hiding the key
     @FocusState private var inputIsFocused: Bool
     
@@ -29,29 +27,20 @@ struct ContentView: View {
                     TextField("Amounts", value: $hour, format: .number)
                         .keyboardType(.decimalPad)
                         .focused($inputIsFocused)
-                    Picker("Choose volue for output", selection: $timer) {
-                        ForEach(times, id: \.self) {
-                            Text($0, format: .number)
-                        }
-                    }.pickerStyle(.navigationLink)
-                }
-                //output for seconds
-                Section{
-                    Text("Seconds")
                 } header: {
-                    Text("Hours converted to Seconds")
+                    Text("Convert hour to other times")
                 }
-                //output for minutes
-                Section{
-                    Text("Minutes")
-                } header: {
-                    Text("Hours converted to Minutes")
+                Section {
+                    Picker("Choose time to convert", selection: $input){
+                        ForEach(times, id: \.self){
+                            Text($0)
+                        }.pickerStyle(.navigationLink)
+                    }
                 }
-                //output for days
-                Section{
-                    Text("Days")
+                Section {
+                    Text("")
                 } header: {
-                    Text("Hours converted to Days")
+                    Text("Result")
                 }
             }
             .navigationTitle("TimeConversion")
