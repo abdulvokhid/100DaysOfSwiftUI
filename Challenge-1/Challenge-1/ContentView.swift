@@ -10,31 +10,37 @@ import SwiftUI
 //Time conversions: User choose seconds, minutes, hours or days
 struct ContentView: View {
     
-    @State private var hour = 0.0
-    @State private var input = "seconds"
-    @State private var output = ""
+    @State private var input = 0.0
+    @State private var inputUnite = "Seconds"
+    @State private var outputUnite = "Hour"
     //Hiding the key
     @FocusState private var inputIsFocused: Bool
     
     //options to choose for picker style
     let times = ["seconds", "minutes", "days"]
     
+    
     var body: some View {
         NavigationStack {
             Form{
                 //deals with hours
                 Section {
-                    TextField("Amounts", value: $hour, format: .number)
+                    TextField("Amounts", value: $input, format: .number)
                         .keyboardType(.decimalPad)
                         .focused($inputIsFocused)
                 } header: {
                     Text("Convert hour to other times")
                 }
                 Section {
-                    Picker("Choose time to convert", selection: $input){
+                    Picker("Convert From", selection: $inputUnite){
                         ForEach(times, id: \.self){
                             Text($0)
                         }.pickerStyle(.navigationLink)
+                    }
+                    Picker("Convert To", selection: $outputUnite){
+                        ForEach(times, id: \.self){
+                            Text($0)
+                        }
                     }
                 }
                 Section {
