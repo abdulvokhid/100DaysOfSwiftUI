@@ -19,6 +19,15 @@ struct ContentView: View {
     //options to choose for picker style
     let times = ["seconds", "minutes", "days"]
     
+    var final : String {
+        let seconds = 86400 * 4 + 3600 + 65
+        let days = seconds / 86400
+        let hours = ((seconds % 86400) / 3600)
+        let minutes = ((seconds % 3600) / 60)
+        let secondss = ((seconds % 3600) % 60)
+        return final
+    }
+    
     
     var body: some View {
         NavigationStack {
@@ -44,7 +53,7 @@ struct ContentView: View {
                     }
                 }
                 Section {
-                    Text("")
+                    Text(final)
                 } header: {
                     Text("Result")
                 }
