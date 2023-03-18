@@ -11,22 +11,21 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var input = 0.0
-    @State private var inputUnite = "Seconds"
-    @State private var outputUnite = "Hour"
+    @State private var inputUnite = UnitDuration.seconds
+    @State private var outputUnite = UnitDuration.hours
     //Hiding the key
     @FocusState private var inputIsFocused: Bool
     
     //options to choose for picker style
-    let times = ["seconds", "minutes", "days"]
-    
-    var final : String {
-        let seconds = 86400 * 4 + 3600 + 65
-        let days = seconds / 86400
-        let hours = ((seconds % 86400) / 3600)
-        let minutes = ((seconds % 3600) / 60)
-        let secondss = ((seconds % 3600) % 60)
-        return final
+   // let times = ["seconds", "minutes", "days"]
+    let unit: [UnitDuration] = [.seconds,.minutes ,.hours]
+    let formatter: MeasurementFormatter
+    init() {
+        formatter = MeasurementFormatter()
+        formatter.unitOptions = .providedUnit
+        formatter.unitStyle = .long
     }
+    
     
     
     var body: some View {
@@ -53,7 +52,7 @@ struct ContentView: View {
                     }
                 }
                 Section {
-                    Text(final)
+                    Text("final")
                 } header: {
                     Text("Result")
                 }
