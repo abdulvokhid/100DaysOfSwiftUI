@@ -11,22 +11,15 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var input = 0.0
-    @State private var inputUnite = UnitDuration.seconds
-    @State private var outputUnite = UnitDuration.hours
     //Hiding the key
     @FocusState private var inputIsFocused: Bool
     
     //options to choose for picker style
-   // let times = ["seconds", "minutes", "days"]
-    let unit: [UnitDuration] = [.seconds,.minutes ,.hours]
-    let formatter: MeasurementFormatter
-    init() {
-        formatter = MeasurementFormatter()
-        formatter.unitOptions = .providedUnit
-        formatter.unitStyle = .long
-    }
+    let times = ["seconds", "minutes", "days"]
     
-    
+    var day = 86400
+    var hour = 3600
+    var minute = 60
     
     var body: some View {
         NavigationStack {
@@ -37,25 +30,9 @@ struct ContentView: View {
                         .keyboardType(.decimalPad)
                         .focused($inputIsFocused)
                 } header: {
-                    Text("Convert hour to other times")
+                    Text("Convert seconds to other times")
                 }
-                Section {
-                    Picker("Convert From", selection: $inputUnite){
-                        ForEach(times, id: \.self){
-                            Text($0)
-                        }.pickerStyle(.navigationLink)
-                    }
-                    Picker("Convert To", selection: $outputUnite){
-                        ForEach(times, id: \.self){
-                            Text($0)
-                        }
-                    }
-                }
-                Section {
-                    Text("final")
-                } header: {
-                    Text("Result")
-                }
+                
             }
             .navigationTitle("TimeConversion")
             .navigationBarTitleDisplayMode(.inline)
