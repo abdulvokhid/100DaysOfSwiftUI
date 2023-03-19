@@ -14,9 +14,6 @@ struct ContentView: View {
     //Hiding the key
     @FocusState private var inputIsFocused: Bool
     
-    //options to choose for picker style
-    let times = ["seconds", "minutes", "days"]
-    
     var day = 86400
     var hour = 3600
     var minute = 60
@@ -31,6 +28,24 @@ struct ContentView: View {
                         .focused($inputIsFocused)
                 } header: {
                     Text("Convert seconds to other times")
+                }
+                Group{
+                    
+                }
+                Section {
+                    Text("")
+                } header: {
+                    Text("From seconds to minutes")
+                }
+                Section{
+                    Text("")
+                }header: {
+                    Text("From seconds to hour")
+                }
+                Section {
+                    Text("")
+                }header: {
+                    Text("From seconds to days")
                 }
                 
             }
