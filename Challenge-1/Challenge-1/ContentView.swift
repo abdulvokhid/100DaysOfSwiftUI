@@ -10,25 +10,25 @@ import SwiftUI
 //Time conversions: User choose seconds, minutes, hours or days
 struct ContentView: View {
     
-    @State private var input = 600
+    @State private var input: Double = 0.0
     //Hiding the key
     @FocusState private var inputIsFocused: Bool
     
-    var day = 86400
-    var hour = 3600
-    var minute = 60
+    let day = 86400
+    let hour = 3600
+    let minute = 60
     //calcules seconds to minutes
-    var outputMinute: Int {
-        let minutes = (input / minute)
+    var outputMinute: Double {
+        let minutes: Double = (input / Double(minute))
         return minutes
     }
     //calcules seconds to hours
-    var outputHour: Int {
-        let hours = (input / hour)
+    var outputHour: Double {
+        let hours: Double = (input / Double(hour))
         return hours
     }
-    var outputDay: Int {
-        let days = (input / day)
+    var outputDay: Double {
+        let days: Double = (input / Double(day))
         return days
     }
     var body: some View {
@@ -43,17 +43,17 @@ struct ContentView: View {
                     Text("Convert seconds to other times")
                 }
                 Section {
-                    Text("\(outputMinute) minute")
+                    Text("\(outputMinute.formatted()) minute")
                 } header: {
                     Text("From seconds to minutes")
                 }
                 Section{
-                    Text("\(outputHour) hour")
+                    Text("\(outputHour.formatted()) hour")
                 }header: {
                     Text("From seconds to hour")
                 }
                 Section {
-                    Text("\(outputDay) day")
+                    Text("\(outputDay.formatted()) day")
                 }header: {
                     Text("From seconds to days")
                 }
