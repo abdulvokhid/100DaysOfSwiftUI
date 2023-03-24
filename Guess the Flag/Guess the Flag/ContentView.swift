@@ -23,13 +23,16 @@ struct ContentView: View {
                 .init(color: Color(red: 0.76, green: 0.15, blue: 0.26), location: 0.3)], center: .top, startRadius: 200, endRadius: 400)
                 .ignoresSafeArea()
             VStack{
-                VStack {
-                    Text("Guess the Flag")
-                        .font(.largeTitle.weight(.bold))
-                        .foregroundColor(.white)
-                    VStack(spacing: 15) {
+                Spacer()
+                Text("Guess the Flag")
+                    .font(.largeTitle.weight(.bold))
+                    .foregroundColor(.white)
+                
+                VStack(spacing: 15) {
+                    VStack {
                         Text("Tap the flag of")
                             .foregroundColor(.white)
+                            .font(.subheadline.weight(.heavy))
                         Text(countries[correctAnswer])
                             .foregroundColor(.white)
                             .font(.largeTitle.weight(.semibold))
@@ -45,20 +48,21 @@ struct ContentView: View {
                         }
                     }
                 }
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 20)
+                .background(.regularMaterial)
+                .clipShape(RoundedRectangle(cornerRadius: 20))
+                
+                Spacer()
+                Spacer()
+                
+                Text("Score: ???")
+                    .foregroundColor(.white)
+                    .font(.title.bold())
+                
+                Spacer()
             }
-            .frame(maxWidth: .infinity)
-            .padding(.vertical, 20)
-            .background(.regularMaterial)
-            .clipShape(RoundedRectangle(cornerRadius: 20))
-            
-            Spacer()
-            Spacer()
-            
-            Text("Score: ???")
-                .foregroundColor(.white)
-                .font(.title.bold())
-            
-            Spacer()
+            .padding()
         }.alert(scoreTitle, isPresented: $showingScore) {
             Button("Continue", action: askQuestion)
         } message: {
