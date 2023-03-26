@@ -96,6 +96,7 @@ struct ContentView: View {
         correctAnswer = Int.random(in: 0...2)
         questionAsked += 1
     }
+    //restarts game
     func restartGame() {
         askQuestion()
         questionAsked = 0
