@@ -24,15 +24,41 @@ struct ContentView: View {
         } //returns the winning answer
     }
     
+    @State private var alertPresented = false
+    @State private var outcomeTitle = ""
+    @State private var wasCorrect = false
+    @State private var score = 0
+    @State private(set) var highScore = 0
+    @State private var hasEnded = false
        
     var body: some View {
         ZStack {
-            Color.gray
+            Color.orange
+                .ignoresSafeArea()
             VStack{
                 Text("Roc Paper Scissors")
                     .padding()
                     .scaledToFit()
                     .font(.largeTitle)
+                Text("The computer chose...")
+                    .padding()
+                Text(options[computerNo])
+                    .font(.largeTitle)
+                Text("You must...")
+                    .padding()
+                Text(needToWin ? "Win" : "Lose")
+                    .foregroundColor(needToWin ? .green : .red)
+                    .padding()
+                    .font(.largeTitle)
+                Text("Choose wisely...")
+                    .padding()
+                HStack {
+                    Spacer()
+                    Button("🪨") {
+                        let userOption = "🪨"
+                        chosen(user: userOption)
+                    }
+                }
             }
         }
     }
