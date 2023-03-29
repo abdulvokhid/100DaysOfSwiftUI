@@ -57,9 +57,36 @@ struct ContentView: View {
                     Button("🪨") {
                         let userOption = "🪨"
                         chosen(user: userOption)
-                    }
+                    }.foregroundColor(.mint)
+                        .font(.largeTitle)
                 }
             }
+        }
+    }
+    func chosen(user: String) {
+        rounds += 1
+        if user == toWin && needToWin == true {
+            outcomeTitle = "Correct"
+            wasCorrect = true
+            score += 1
+        }
+        if user == toWin && needToWin == false {
+            outcomeTitle = "Wrong"
+            wasCorrect = false
+        }
+        if user != toWin && needToWin == true {
+            outcomeTitle = "Wrong"
+            wasCorrect = false
+        }
+        if user != toWin && needToWin == false {
+            outcomeTitle = "Correct"
+            wasCorrect = true
+            score += 1
+        }
+        if rounds == 10 {
+            hasEnded = true
+        } else {
+            alertPresented = true
         }
     }
 }
