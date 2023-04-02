@@ -59,6 +59,51 @@ struct ContentView: View {
                         chosen(user: userOption)
                     }.foregroundColor(.mint)
                         .font(.largeTitle)
+                    Spacer()
+                    Button("🗒") {
+                        let userOption = "🗒"
+                        chosen(user: userOption)
+                    }.foregroundColor(.black)
+                    .font(.largeTitle)
+                    Spacer()
+                    Button("✂️") {
+                        let userOption = "✂️"
+                        chosen(user: userOption)
+                    } .foregroundColor(.indigo)
+                    .font(.largeTitle)
+                    Spacer()
+                }
+                Spacer()
+                HStack{
+                    Text("Score: \(score)")
+                        .padding(20)
+                    VStack{
+                        Text("High Score: \(highScore)")
+                        Button("Reset") {
+                            highScore = 0
+                        }
+                        .foregroundColor(.yellow)
+                    }
+                }
+                
+            } .alert(outcomeTitle, isPresented: $alertPresented) {
+                Button("Next", action: nextQuestion)
+                
+            } message: {
+                if wasCorrect == true {
+                    Text("Your score is \(score)")
+                } else {
+                    Text("Try again")
+                }
+                
+            } .alert("Game Over", isPresented: $hasEnded) {
+                Button("Restart game", action: gameOver)
+            } message: {
+                if wasCorrect == true {
+                    Text("Correct! Your final score was \(score)")
+                } else {
+                    Text("Wrong! Your final score was \(score)")
+                    
                 }
             }
         }
@@ -88,6 +133,18 @@ struct ContentView: View {
         } else {
             alertPresented = true
         }
+    }
+    func nextQuestion() {
+            options.shuffle()
+            needToWin = Bool.random()
+        }
+    func gameOver() {
+        nextQuestion()
+        rounds = 0
+        if score > highScore {
+            highScore = score
+        }
+        score = 0
     }
 }
 
