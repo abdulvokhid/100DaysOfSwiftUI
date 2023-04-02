@@ -51,7 +51,7 @@ struct ContentView: View {
                     .padding()
                     .font(.largeTitle)
                 Text("Choose wisely...")
-                    .padding()
+                    .padding(30)
                 HStack {
                     Spacer()
                     Button("🪨") {
@@ -69,7 +69,8 @@ struct ContentView: View {
                     Button("✂️") {
                         let userOption = "✂️"
                         chosen(user: userOption)
-                    } .foregroundColor(.indigo)
+                    }
+                    .foregroundColor(.indigo)
                     .font(.largeTitle)
                     Spacer()
                 }
@@ -82,7 +83,7 @@ struct ContentView: View {
                         Button("Reset") {
                             highScore = 0
                         }
-                        .foregroundColor(.yellow)
+                        .foregroundColor(.black)
                     }
                 }
                 
