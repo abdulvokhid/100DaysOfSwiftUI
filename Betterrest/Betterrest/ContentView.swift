@@ -39,6 +39,11 @@ struct ContentView: View {
             .toolbar {
                 Button("Calculate", action: calculateBedtime)
             }
+            .alert(alertTitle, isPresented: $showingAlert) {
+                Button("OK") {}
+            } message: {
+                Text(alertMessage)
+            }
         }
     }
     func calculateBedtime() {
@@ -51,9 +56,12 @@ struct ContentView: View {
             let minute = (components.minute ?? 0) * 60
             let prediction = try model.prediction(wake: <#T##Double#>(hour + minute), estimatedSleep: sleepAmount, coffee: Double(coffeeAmount))
             let sleepTime = wakeUp - prediction.actualSleep
+            alertTitle = "Your ideal bedtime is..."
+            alertMessage = sleepTime.formatted(date: .omitted, time: .shortened)
             
         } catch {
-            //something
+            alertTitle = "Error"
+            alertMessage = "Sorry, there was a problem calculating your bedtime"
         }
     }
 }
