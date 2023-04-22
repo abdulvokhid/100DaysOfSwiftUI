@@ -26,6 +26,7 @@ struct ContentView: View {
                         Spacer()
                         
                         Text(item.amount, format: .currency(code: "USD"))
+                            .foregroundColor(item.amount >= 100 ? .orange : item.amount < 10 ? .green : .blue)
                     }
                 }
                 .onDelete(perform: removeItems)
@@ -41,11 +42,13 @@ struct ContentView: View {
             .sheet(isPresented: $showingAddExpense) {
                 AddView(expenses: expenses)
             }
+            
         }
     }
     func removeItems(at offsets: IndexSet) {
         expenses.items.remove(atOffsets: offsets)
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
