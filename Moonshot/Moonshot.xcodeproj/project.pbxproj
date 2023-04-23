@@ -16,6 +16,7 @@
 		F9CEBB7D29F54BE900CAAEBA /* Astronaut.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CEBB7C29F54BE900CAAEBA /* Astronaut.swift */; };
 		F9CEBB7F29F54C7300CAAEBA /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CEBB7E29F54C7300CAAEBA /* Bundle-Decodable.swift */; };
 		F9CEBB8129F54F1400CAAEBA /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CEBB8029F54F1400CAAEBA /* Mission.swift */; };
+		F9CEBB8329F557EE00CAAEBA /* Color-Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CEBB8229F557EE00CAAEBA /* Color-Theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		F9CEBB7C29F54BE900CAAEBA /* Astronaut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Astronaut.swift; sourceTree = "<group>"; };
 		F9CEBB7E29F54C7300CAAEBA /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		F9CEBB8029F54F1400CAAEBA /* Mission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
+		F9CEBB8229F557EE00CAAEBA /* Color-Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Theme.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			children = (
 				F9CEBB6A29F40B4B00CAAEBA /* MoonshotApp.swift */,
 				F9CEBB6C29F40B4B00CAAEBA /* ContentView.swift */,
+				F9CEBB8229F557EE00CAAEBA /* Color-Theme.swift */,
 				F9CEBB7C29F54BE900CAAEBA /* Astronaut.swift */,
 				F9CEBB8029F54F1400CAAEBA /* Mission.swift */,
 				F9CEBB7E29F54C7300CAAEBA /* Bundle-Decodable.swift */,
@@ -155,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9CEBB7D29F54BE900CAAEBA /* Astronaut.swift in Sources */,
+				F9CEBB8329F557EE00CAAEBA /* Color-Theme.swift in Sources */,
 				F9CEBB6D29F40B4B00CAAEBA /* ContentView.swift in Sources */,
 				F9CEBB6B29F40B4B00CAAEBA /* MoonshotApp.swift in Sources */,
 				F9CEBB8129F54F1400CAAEBA /* Mission.swift in Sources */,
