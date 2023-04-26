@@ -32,7 +32,7 @@ struct MissionView: View {
                             .foregroundColor(.lightBackground)
                             .padding(.vertical)
                         
-                        Text("Mission Highlights")
+                        Text("Launch Date: \(self.mission.formattedLaunchDate)")
                             .font(.title.bold())
                             .padding(.bottom, 5)
                         
